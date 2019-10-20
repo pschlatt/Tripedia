@@ -1,9 +1,11 @@
 # Tripedia
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+## Authors
+- [Glynnis O'Connell](https://github.com/GlynnisOC)
+- [David Gitlen](https://github.com/davidagitlen)
+- [Brandy Mello](https://github.com/BrandyMello)
+- [Christopher Lane](https://github.com/CLLane)
+- [Paul Schlattmann](https://github.com/pschlatt)
 
 * Ruby version
 
