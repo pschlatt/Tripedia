@@ -4,14 +4,15 @@ class YelpService
     @location = location
   end
 
-  def restaurants(interest)
+  def interests(category)
     url = "/v3/businesses/search"
     lat = @location[:lat]
     long = @location[:lng]
-    params = { term: interest, latitude: lat, longitude: long }
-    get_json(url, params)
+    params = { term: category, latitude: lat, longitude: long }
+    get_json(url, params)[:businesses]
   end
 
+private
   def connection
     Faraday.new("https://api.yelp.com") do |f|
       f.headers['Authorization'] = "Bearer" + " #{ENV['YELP_API_KEY']}"
@@ -24,5 +25,3 @@ class YelpService
     JSON.parse(response.body, symbolize_names: true)
   end
 end
-
-# term=delis&latitude=39.7205825&longitude=-105.056658
