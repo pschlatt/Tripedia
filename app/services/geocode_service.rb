@@ -1,6 +1,6 @@
 class GeocodeService 
 
-  def coordinates(location)
+  def addressData(location)
     url = "/maps/api/geocode/json"
     params = { address: location }
     get_json(url, params)[:results][0]
