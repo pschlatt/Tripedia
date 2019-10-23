@@ -7,7 +7,6 @@ RSpec.describe GeocodeService do
         geo = GeocodeService.new
         location = "denver co"
         response = geo.addressData(location)
-        binding.pry
         expect(response).to be_a(Hash)
       end
     end
