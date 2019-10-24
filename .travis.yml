@@ -6,5 +6,3 @@ before_script:
 - bundle exec rake db:migrate
 services:
 - postgresql
-# bundle exec rails db:migrate
-# bundle exec rspec
