@@ -7,5 +7,7 @@ rvm:
 before_script:
 - bundle exec rake db:create --all
 - bundle exec rake db:migrate
+services:
+- postgresql
 # bundle exec rails db:migrate
 # bundle exec rspec
