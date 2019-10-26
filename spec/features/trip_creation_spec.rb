@@ -8,7 +8,6 @@ RSpec.describe 'Route_Creation', type: :request do
     expect(response).to be_successful
 
     trip = JSON.parse(response.body)
-
     expect(trip).to have_key("id")
     expect(trip).to have_key("origin")
     expect(trip).to have_key("destination")
