@@ -13,6 +13,6 @@ class DirectionsMatrixFacade
   private
 
   def service
-    @_service ||= DirectionsMatrixService.new()
+    @_service ||= DirectionsMatrixService.new
   end
 end

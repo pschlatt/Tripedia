@@ -1,13 +1,9 @@
 class DirectionsMatrixService
 
-  def initialize(trip)
-    @trip = trip
-  end
-
-  def get_distance_and_duration
+  def get_distance_and_duration(trip)
     url = "/maps/api/distancematrix/json"
-    origin = @trip[:origin]
-    destination = @trip[:destination]
+    origin = trip[:origin]
+    destination = trip[:destination]
     params = { units: 'imperial', origins: origin, destinations: destination }
     get_json(url, params)
   end
