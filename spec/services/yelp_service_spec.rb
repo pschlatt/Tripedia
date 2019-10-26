@@ -20,5 +20,13 @@ RSpec.describe YelpService do
         expect(response[0]).to have_key(:location)
       end
     end
+    #
+    # describe '#populate_pins(waypoints)' do
+    #   it "returns information for each category requested as well as location" do
+    #     waypoints = [{"location":{"lat":39.751774,"lng":-104.996809},"stopover":true},{"location":{"lat":39.773563,"lng":-105.039513},"stopover":true},{"location":{"lat":39.71698,"lng":-105.08001},"stopover":true}]
+    #     yelp = YelpService.new(waypoints[0])
+    #     binding.pry
+    #   end
+    # end
   end
 end
