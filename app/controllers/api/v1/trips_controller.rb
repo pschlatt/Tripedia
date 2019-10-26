@@ -1,12 +1,11 @@
 class Api::V1::TripsController < ApplicationController
 
   def create
-    facade = GeocodeFacade.new(trip_params[:origin])
-    facade2 = GeocodeFacade.new(trip_params[:destination])
+    facade = DirectionsMatrixFacade.new(trip_params)
     user = User.find(trip_params[:user_id])
     origin = facade.coordinates
     destination = facade2.coordinates
-    render json: Trip.create(origin: origin, destination: destination, user_id: user.id)
+    render json: Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
   end
 
   private
