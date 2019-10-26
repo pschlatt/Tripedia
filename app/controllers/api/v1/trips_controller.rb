@@ -11,6 +11,9 @@ class Api::V1::TripsController < ApplicationController
     render json: Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
   end
 
+
+  private
+
   def origin_coords
     location = trip_params['origin']
     geo = GeocodeFacade.new(location)
@@ -22,9 +25,7 @@ class Api::V1::TripsController < ApplicationController
     geo = GeocodeFacade.new(location)
     geo.coordinates
   end
-
-  private
-
+  
   def trip_params
     params.permit(:origin, :destination, :user_id)
   end
