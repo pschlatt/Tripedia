@@ -5,8 +5,8 @@ RSpec.describe DirectionsMatrixService do
     describe '#interests(category)' do
       it "returns a list of interests for location requested" do
         trip = { 'origin': 'denver,co', 'destination': 'taos,nm' }
-        distance = DirectionsMatrixService.new(trip)
-        response = distance.get_distance_and_duration
+        distance = DirectionsMatrixService.new
+        response = distance.get_distance_and_duration(trip)
 
         expect(response).to be_a(Hash)
         expect(response).to have_key(:destination_addresses)
