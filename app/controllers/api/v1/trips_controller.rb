@@ -11,6 +11,15 @@ class Api::V1::TripsController < ApplicationController
     render json: Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
   end
 
+  def radii
+    stops = []
+    distance = params[:distance].to_i
+    while distance >= 25 do
+      stops << distance -= 25
+    end
+    stops
+  end
+
 
   private
 
@@ -25,7 +34,7 @@ class Api::V1::TripsController < ApplicationController
     geo = GeocodeFacade.new(location)
     geo.coordinates
   end
-  
+
   def trip_params
     params.permit(:origin, :destination, :user_id)
   end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Route_Creation', type: :request do
+RSpec.describe 'Trip_Creation', type: :request do
   it "can take origin and destination of a trip and return geocoded points" do
     user = User.create!(email: "yo@bach.com", password: "password")
 
