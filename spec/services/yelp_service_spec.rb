@@ -8,7 +8,7 @@ RSpec.describe YelpService do
         yelp = YelpService.new(location)
         category = "restaurants"
         response = yelp.interests(category)
-        
+
         expect(response[0]).to have_key(:id)
         expect(response[0]).to have_key(:alias)
         expect(response[0]).to have_key(:name)
@@ -17,7 +17,6 @@ RSpec.describe YelpService do
         expect(response[0]).to have_key(:review_count)
         expect(response[0]).to have_key(:categories)
         expect(response[0]).to have_key(:rating)
-        expect(response[0]).to have_key(:price)
         expect(response[0]).to have_key(:location)
       end
     end
