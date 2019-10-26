@@ -12,7 +12,7 @@ class GeocodeFacade
   private
 
   def service
-    GeocodeService.new
+    @_service ||= GeocodeService.new
   end
 
 end
