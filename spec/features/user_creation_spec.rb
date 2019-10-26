@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "User_Creation", type: :request do
 
   it "Can make a successful request" do
-    post "/api/v1/users?email=paul@gmail.com&password=123&password_confirmation=123"
+    post "/api/v1/users?name=paul&email=paul@gmail.com&password=123&password_confirmation=123"
     expect(response).to be_successful
     user = JSON.parse(response.body)
     expect(user).to have_key("id")
@@ -21,7 +21,7 @@ RSpec.describe "User_Creation", type: :request do
   end
 
   it "Can make a Unsuccessful request - Email Already Used" do
-    User.create(email: "paul@gmail.com", password: "apassward")
+    User.create(name: "paul", email: "paul@gmail.com", password: "apassward")
     post "/api/v1/users?email=paul@gmail.com&password=123&password_confirmation=123"
     user = JSON.parse(response.body)
     expect(user).to have_key("message")

@@ -19,12 +19,12 @@ RSpec.describe "User_Creation", type: :request do
   end
 
   it "Can make a Unsuccessful request - Email Already Used" do
-    User.create(email: "paul@gmail.com", password: "apassward")
+    User.create(name: "paul", email: "paul@gmail.com", password: "apassward")
     get "/api/v1/users?email=paul@gmail.com&password=apassward"
     user = JSON.parse(response.body)
     expect(user).to have_key("email")
     expect(user).to have_key("logged_in")
-    expect(user.values).to eq(["paul@gmail.com", true])
+    expect(user.values).to eq(["paul", "paul@gmail.com", true])
     expect(response.status).to eq(200)
   end
 

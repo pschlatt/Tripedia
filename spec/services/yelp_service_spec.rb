@@ -17,7 +17,6 @@ RSpec.describe YelpService do
         expect(response.first).to have_key(:review_count)
         expect(response.first).to have_key(:categories)
         expect(response.first).to have_key(:rating)
-        expect(response.first).to have_key(:price)
         expect(response.first).to have_key(:location)
       end
     end
