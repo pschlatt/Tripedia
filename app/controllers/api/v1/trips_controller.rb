@@ -11,14 +11,23 @@ class Api::V1::TripsController < ApplicationController
     render json: Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
   end
 
+  # def stops
+  #   binding.pry
+  # end
+
   def radii
-    stops = []
-    distance = params[:distance].to_i
-    while distance >= 25 do
-      stops << distance -= 25
-    end
-    stops
+    binding.pry
+    trip = Trip.find(params[:id])
+    str_or_coords = trip[:origin]
+    str_dest_coords = trip[:destination]
+    origin = eval(str_or_coords)
+    destination = eval(str_dest_coords)
+    origin_lat_and_lng = origin.values
+    dest_lat_and_lng = destination.values
+    midpoint = Geocoder::Calculations.geographic_center([origin_lat_and_lng, dest_lat_and_lng])
+    interval_count = 
   end
+
 
 
   private
