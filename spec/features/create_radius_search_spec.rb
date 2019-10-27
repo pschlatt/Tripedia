@@ -7,7 +7,7 @@ RSpec.describe 'Radius_Creation', type: :request do
 
     get "/api/v1/users/#{user.id}/trips/#{trip.id}?distance=#{trip.distance}"
     expect(response).to be_successful
-    radii = JSON.parse(response.body)
+    # radii = JSON.parse(response.body)
 
   end
 end
