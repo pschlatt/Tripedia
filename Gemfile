@@ -6,6 +6,7 @@ gem "figaro"
 gem 'faraday'
 gem 'rack-cors'
 gem 'simplecov', require: false, group: :test
+gem 'travis'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

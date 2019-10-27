@@ -12,6 +12,7 @@ RSpec.describe GeocodeService do
         expect(response).to have_key(:address_components)
         expect(response).to have_key(:formatted_address)
         expect(response).to have_key(:geometry)
+
       end
     end
   end
