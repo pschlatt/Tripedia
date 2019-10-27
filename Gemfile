@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem "figaro"
 gem 'faraday'
+gem 'geocoder'
+gem 'json'
 gem 'simplecov', require: false, group: :test
 
 
