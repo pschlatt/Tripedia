@@ -24,8 +24,19 @@ class Api::V1::TripsController < ApplicationController
     destination = eval(str_dest_coords)
     origin_lat_and_lng = origin.values
     dest_lat_and_lng = destination.values
-    midpoint = Geocoder::Calculations.geographic_center([origin_lat_and_lng, dest_lat_and_lng])
-
+    interval_distance = distance / 30
+    x2 = dest_lat_and_lng[0]
+    x1 = origin_lat_and_lng[0]
+    y2 = dest_lat_and_lng[1]
+    y1 = origin_lat_and_lng[1]
+    lat_displacement = (x2 - x1)/interval_distance
+    lng_displacement = (y2 - y1)/interval_distance
+    new_lat = x1 + lat_displacement
+    new_lng = y1 + lng_displacement
+    new_lat_and_lng << new_lat
+    new_lat_and_lng << new_lng
+    new_point_lat = new_lat_and_lng[0] + lat_displacement
+    new_point_lng = new_lat_and_lng[1] + lng_displacement
   end
 
 
