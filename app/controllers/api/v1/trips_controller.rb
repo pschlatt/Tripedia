@@ -16,7 +16,6 @@ class Api::V1::TripsController < ApplicationController
     distance = params[:distance].to_i
     interval_count = ( distance / 25 ).to_i
     trip = Trip.find(params[:id])
-    binding.pry
     str_or_coords = trip[:origin]
     str_dest_coords = trip[:destination]
     origin = eval(str_or_coords)
