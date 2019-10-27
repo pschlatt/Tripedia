@@ -8,6 +8,7 @@ gem 'geocoder'
 gem 'json'
 gem 'simplecov', require: false, group: :test
 gem 'travis'
+gem 'rack-cors'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

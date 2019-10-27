@@ -1,4 +1,4 @@
-# Tripedia
+# Tripedia [![Build Status](https://travis-ci.org/pschlatt/Tripedia.svg?branch=master)](https://travis-ci.org/pschlatt/Tripedia)
 
 ## Authors
 - [Glynnis O'Connell](https://github.com/GlynnisOC)

@@ -25,7 +25,7 @@ class Api::V1::TripsController < ApplicationController
     origin_lat_and_lng = origin.values
     dest_lat_and_lng = destination.values
     midpoint = Geocoder::Calculations.geographic_center([origin_lat_and_lng, dest_lat_and_lng])
-    interval_count = 
+
   end
 
 
