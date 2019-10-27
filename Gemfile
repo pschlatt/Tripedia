@@ -4,12 +4,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem "figaro"
 gem 'faraday'
-<<<<<<< HEAD
+
 gem 'geocoder'
 gem 'json'
-=======
+
 gem 'rack-cors'
->>>>>>> master
+
 gem 'simplecov', require: false, group: :test
 gem 'travis'
 
