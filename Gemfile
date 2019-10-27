@@ -7,6 +7,7 @@ gem 'faraday'
 gem 'geocoder'
 gem 'json'
 gem 'simplecov', require: false, group: :test
+gem 'travis'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
