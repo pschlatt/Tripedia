@@ -9,7 +9,7 @@ class YelpFacade
     Attraction.new(grabber.interests(@category))
   end
 
-  def self.get_attractions_on_route(trip)
+  def self.get_attractions_on_route(trip, categories)
     distance = trip[:distance].to_i
     str_or_coords = trip[:origin]
     str_dest_coords = trip[:destination]
@@ -35,7 +35,11 @@ class YelpFacade
       x1 = new_lat
       y1 = new_lng
     end
-    yelp_radii
+    categories.map do |category|
+      yelp_radii.flat_map do |location|
+        YelpService.new(location).interests(category)
+      end
+    end
   end
 
   private
@@ -43,5 +47,4 @@ class YelpFacade
   def grabber
     @_grabber ||= YelpService.new(@location)
   end
-
 end
