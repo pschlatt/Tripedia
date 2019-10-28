@@ -25,7 +25,7 @@ class YelpFacade
     lat_displacement = (x2 - x1)/interval_count
     lng_displacement = (y2 - y1)/interval_count
     yelp_radii = []
-    array_of_stops = interval_count.times do |interval|
+    interval_count.times do |interval|
       lat_and_lng = {}
       new_lat = x1 + lat_displacement
       new_lng = y1 + lng_displacement
