@@ -8,16 +8,29 @@ class Api::V1::TripsController < ApplicationController
     trip_data = facade.return_trip_details
     distance = trip_data[:rows][0][:elements][0][:distance][:text]
     duration = trip_data[:rows][0][:elements][0][:duration][:text]
-    render json: Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
-  end
-
-  def attractions
-    trip = Trip.find(params[:id])
-    categories = params[:categories]
-    render json: YelpFacade.get_attractions_on_route(trip, categories)
+    trip = Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
+    render json: {
+      trip: trip,
+      attractions: YelpFacade.get_attractions_on_route(trip, categories)
+    }
   end
 
   private
+
+  def categories
+    [
+    "active", "galleries", "haunted",
+    "museums", "spa", "nightlife",
+    "bedbreakfast", "hotels", "campgrounds",
+    "resorts", "hostels", "rvparks",
+    "breweries", "divebars", "pub",
+    "wine", "champagne_bars", "sports",
+    "breakfast_brunch", "chinese", "hotdogs",
+    "american", "gastropub", "gluten_free",
+    "bodyshops", "evchargingstations", "servicestations",
+    "reststops", "petservices", "pharmacy"
+    ]
+  end
 
   def origin_coords
     location = trip_params['origin']

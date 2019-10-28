@@ -5,9 +5,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post '/users', to: 'users#create'
       post '/user_login', to: 'sessions#create'
-      get '/users/:user_id/trips/:id', to: 'trips#radii'
       post '/users/:user_id/trips', to: 'trips#create'
-      # get '/users/:user_id/trips/:id', to: 'trips#stops'
     end
   end
 end
