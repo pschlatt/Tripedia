@@ -4,14 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem "figaro"
 gem 'faraday'
-
 gem 'geocoder'
 gem 'json'
-
-gem 'rack-cors'
-
 gem 'simplecov', require: false, group: :test
 gem 'travis'
+gem 'rack-cors'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
