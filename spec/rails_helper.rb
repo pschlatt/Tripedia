@@ -70,3 +70,9 @@ RSpec.configure do |config|
     end
   end
 end
+
+def stub_trip_creation_call
+  user = User.create!(name: "miss buttersworth", email: "yo@bach.com", password: "password")
+  trip_created = File.open("./fixtures/trip_creation.json")
+  stub_request(:post, "/api/v1/users/#{user.id}/trips?origin=denver,co&destination=taos,nm").to_return(status:200, body:trip_created)
+end
