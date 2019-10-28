@@ -8,7 +8,6 @@ RSpec.describe 'Trip_Creation', type: :request do
     expect(response).to be_successful
 
     # trip = JSON.parse(response.body)
-    #
     # expect(trip).to have_key("trip")
     # expect(trip).to have_key("attractions")
   end
