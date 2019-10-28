@@ -13,7 +13,7 @@ class Api::V1::TripsController < ApplicationController
 
   def radii
     trip = Trip.find(params[:id])
-    Yelp.get_attractions_on_route(trip)
+    YelpFacade.get_attractions_on_route(trip)
     # trip = Trip.find(params[:id])
     # distance = trip[:distance].to_i
     # str_or_coords = trip[:origin]

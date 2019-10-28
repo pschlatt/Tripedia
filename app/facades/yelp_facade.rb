@@ -24,14 +24,18 @@ class YelpFacade
     y1 = origin_lat_and_lng[1]
     lat_displacement = (x2 - x1)/interval_count
     lng_displacement = (y2 - y1)/interval_count
+    yelp_radii = []
     array_of_stops = interval_count.times do |interval|
+      lat_and_lng = {}
       new_lat = x1 + lat_displacement
       new_lng = y1 + lng_displacement
-
+      lat_and_lng[:lat] = new_lat
+      lat_and_lng[:lng] = new_lng
+      yelp_radii.push(lat_and_lng)
       x1 = new_lat
       y1 = new_lng
     end
-    array_of_stops
+    yelp_radii
   end
 
   private
