@@ -1,21 +1,21 @@
-{"trip"=>
-  {"id"=>33,
-   "origin"=>"{:lat=>39.7392358, :lng=>-104.990251}",
-   "destination"=>"{:lat=>36.4072485, :lng=>-105.5730665}",
-   "created_at"=>"2019-10-28T04:35:27.500Z",
-   "updated_at"=>"2019-10-28T04:35:27.500Z",
-   "user_id"=>50,
-   "distance"=>"287 mi",
-   "duration"=>"4 hours 42 mins"},
- "attractions"=>
-  [[{"id"=>"LmfU13EiInyCTkFIN4pVLw",
-     "alias"=>"colorado-fly-fishing-sedalia",
-     "name"=>"Colorado Fly Fishing",
-     "image_url"=>"https://s3-media2.fl.yelpcdn.com/bphoto/_fDC72ZR73jiA-Eaey_Jmw/o.jpg",
-     "is_closed"=>false,
-     "url"=>
+{"trip":
+  {"id":33,
+   "origin":"{:lat=>39.7392358, :lng=>-104.990251}",
+   "destination":"{:lat=>36.4072485, :lng=>-105.5730665}",
+   "created_at":"2019-10-28T04:35:27.500Z",
+   "updated_at":"2019-10-28T04:35:27.500Z",
+   "user_id":50,
+   "distance":"287 mi",
+   "duration":"4 hours 42 mins"},
+ "attractions":
+  [[{"id":"LmfU13EiInyCTkFIN4pVLw",
+     "alias":"colorado-fly-fishing-sedalia",
+     "name":"Colorado Fly Fishing",
+     "image_url":"https://s3-media2.fl.yelpcdn.com/bphoto/_fDC72ZR73jiA-Eaey_Jmw/o.jpg",
+     "is_closed":false,
+     "url":
       "https://www.yelp.com/biz/colorado-fly-fishing-sedalia?adjust_creative=pVrRdyk-0QZdpoY-HSxTFg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=pVrRdyk-0QZdpoY-HSxTFg",
-     "review_count"=>4,
-     "categories"=>[{"alias"=>"huntingfishingsupplies", "title"=>"Hunting & Fishing Supplies"}, {"alias"=>"fishing", "title"=>"Fishing"}],
-     "rating"=>2.0}
-     ]]}
+     "review_count":4,
+     "categories":[{"alias":"huntingfishingsupplies", "title":"Hunting & Fishing Supplies"}, {"alias":"fishing", "title":"Fishing"}],
+     "rating":2.0}]]
+   }
