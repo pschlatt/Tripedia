@@ -23,7 +23,7 @@ class Api::V1::TripsController < ApplicationController
     "bedbreakfast", "hotels", "resorts",
     "breweries", "divebars", "sports",
     "breakfast_brunch", "chinese", "american",
-    "bodyshops", "servicestations", "reststops" 
+    "bodyshops", "servicestations", "reststops"
     ]
   end
 
