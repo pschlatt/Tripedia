@@ -2,6 +2,7 @@
 require 'spec_helper'
 require 'shoulda/matchers'
 require 'simplecov'
+require 'json'
 SimpleCov.start
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)

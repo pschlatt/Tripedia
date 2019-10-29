@@ -38,7 +38,7 @@ class YelpFacade
     categories.map do |category|
       yelp_radii.flat_map do |location|
         YelpService.new(location).interests(category)
-      end
+      end.uniq
     end
   end
 
