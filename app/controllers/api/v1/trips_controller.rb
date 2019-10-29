@@ -19,11 +19,7 @@ class Api::V1::TripsController < ApplicationController
 
   def categories
     [
-    "active", "haunted", "museums", "spa",
-    "bedbreakfast", "hotels", "resorts",
-    "breweries", "divebars", "sports",
-    "breakfast_brunch", "chinese", "american",
-    "bodyshops", "servicestations", "reststops"
+    "active", "galleries", "haunted"
     ]
   end
 
