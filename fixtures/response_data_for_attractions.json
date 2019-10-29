@@ -1,56 +1,4 @@
-{:trip:
-  {:id:38,
-   :origin:"{:lat=>39.7392358, :lng=>-104.990251}",
-   :destination:"{:lat=>36.4072485, :lng=>-105.5730665}",
-   :created_at:"2019-10-29T00:51:02.403Z",
-   :updated_at:"2019-10-29T00:51:02.403Z",
-   :user_id:89,
-   :distance:"287 mi",
-   :duration:"4 hours 42 mins"},
- :attractions:
-  [[{:id:"LmfU13EiInyCTkFIN4pVLw",
-     :alias:"colorado-fly-fishing-sedalia",
-     :name:"Colorado Fly Fishing",
-     :image_url:"https://s3-media2.fl.yelpcdn.com/bphoto/_fDC72ZR73jiA-Eaey_Jmw/o.jpg",
-     :is_closed:false,
-     :url:
-      "https://www.yelp.com/biz/colorado-fly-fishing-sedalia?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-     :review_count:4,
-     :categories:[{alias:"huntingfishingsupplies", title:"Hunting & Fishing Supplies"}, {:alias=>"fishing", :title=>"Fishing"}],
-     :rating=>2.0,
-     :coordinates=>{:latitude=>39.3833427429199, :longitude=>-105.071846008301},
-     :transactions=>[],
-     :location=>
-      {:address1=>"1668 N State Hwy 67",
-       :address2=>nil,
-       :address3=>"",
-       :city=>"Sedalia",
-       :zip_code=>"80135",
-       :country=>"US",
-       :state=>"CO",
-       :display_address=>["1668 N State Hwy 67", "Sedalia, CO 80135"]},
-     :phone=>"+19704061538",
-     :display_phone=>"(970) 406-1538",
-     :distance=>2190.266806143878},
-    {:id=>"-QdjrmCbdgw6DHnD_DhZhg",
-     :alias=>"pikes-peak-paradise-bed-and-breakfast-woodland-park",
-     :name=>"Pikes Peak Paradise Bed and Breakfast",
-     :image_url=>"https://s3-media4.fl.yelpcdn.com/bphoto/jT94sfhb3dui22IOxDXQow/o.jpg",
-     :is_closed=>false,
-     :url=>
-      "https://www.yelp.com/biz/pikes-peak-paradise-bed-and-breakfast-woodland-park?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-     :review_count=>29,
-     :categories=>[{:alias=>"bedbreakfast", :title=>"Bed & Breakfast"}, {:alias=>"venues", :title=>"Venues & Event Spaces"}],
-     :rating=>4.5,
-     :coordinates=>{:latitude=>38.9823163, :longitude=>-105.1015322},
-     :transactions=>[],
-     :location=>
-      {:address1=>"236 Pinecrest Rd",
-       :address2=>"",
-       :address3=>"",
-       :city=>"Woodland Park",
-
-=> {:trip=>
+{:trip=>
   {:id=>38,
    :origin=>"{:lat=>39.7392358, :lng=>-104.990251}",
    :destination=>"{:lat=>36.4072485, :lng=>-105.5730665}",
@@ -401,56 +349,8 @@
      :alias=>"re-threads-taos",
      :name=>"Re-Threads",
      :image_url=>"https://s3-media4.fl.yelpcdn.com/bphoto/Yil1xOJIw6fUt7SFrCYdWA/o.jpg",
-:
-     :categories=>[{:alias=>"outdoorgear", :title=>"Outdoor Gear"}],
-     :rating=>4.5,
-     :coordinates=>{:latitude=>36.4083983, :longitude=>-105.5728943},
-     :transactions=>[],
-     :price=>"$$$",
-     :location=>
-      {:address1=>"103 Bent St",
-       :address2=>"",
-       :address3=>"",
-       :city=>"Taos",
-       :zip_code=>"87571",
-       :country=>"US",
-       :state=>"NM",
-       :display_address=>["103 Bent St", "Taos, NM 87571"]},
-     :phone=>"+15757519100",
-     :display_phone=>"(575) 751-9100",
-     :distance=>128.7771632183183},
-    {:id=>"Qfq_beYjuz_MBRyGXOkHSw",
-     :alias=>"re-threads-taos",
-     :name=>"Re-Threads",
-     :image_url=>"https://s3-media4.fl.yelpcdn.com/bphoto/Yil1xOJIw6fUt7SFrCYdWA/o.jpg",
      :is_closed=>false,
 :
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      :categories=>[{:alias=>"outdoorgear", :title=>"Outdoor Gear"}],
      :rating=>4.5,
      :coordinates=>{:latitude=>36.4083983, :longitude=>-105.5728943},
@@ -1162,7 +1062,6 @@
      :phone=>"+15757375001",
      :display_phone=>"(575) 737-5001",
      :distance=>117.60153201728883}],
-   [],
    [{:id=>"eNafvIE9G2M9FvBKtGk7xw",
      :alias=>"taos-art-museum-and-fechin-house-taos",
      :name=>"Taos Art Museum and Fechin House",
@@ -3589,8 +3488,6 @@
      :phone=>"+15753776441",
      :display_phone=>"(575) 377-6441",
      :distance=>26562.179515527736}],
-   [],
-   [],
    [{:id=>"j0CYUSW_3okjFrVgryBx7w",
      :alias=>"taos-mesa-brewing-taos-tap-room-taos",
      :name=>"Taos Mesa Brewing Taos Tap Room",
@@ -4100,7 +3997,6 @@
      :url=>
       "https://www.yelp.com/biz/gutiz-taos?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
      :review_count=>191,
-:
      :price=>"$$",
      :location=>
       {:address1=>"712 Paseo Del Pueblo Norte",
@@ -4146,7 +4042,6 @@
      :is_closed=>false,
      :url=>
       "https://www.yelp.com/biz/gutiz-taos?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-:
      :price=>"$$",
      :location=>
       {:address1=>"712 Paseo Del Pueblo Norte",
@@ -4167,55 +4062,6 @@
      :is_closed=>false,
      :url=>
       "https://www.yelp.com/biz/del-norte-liquors-ranchos-de-taos?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-:
-     :price=>"$$",
-     :location=>
-      {:address1=>"712 Paseo Del Pueblo Norte",
-       :address2=>"",
-       :address3=>"",
-       :city=>"Taos",
-       :zip_code=>"87571",
-       :country=>"US",
-       :state=>"NM",
-       :display_address=>["712 Paseo Del Pueblo Norte", "Taos, NM 87571"]},
-     :phone=>"+15757583112",
-     :display_phone=>"(575) 758-3112",
-     :distance=>1498.0247534438574},
-    {:id=>"Dw5yRDG10QSbMG6RtDNJ2g",
-     :alias=>"del-norte-liquors-ranchos-de-taos",
-     :name=>"Del Norte Liquors",
-     :image_url=>"https://s3-media2.fl.yelpcdn.com/bphoto/7t0mTg-FvN4d2prjVtc5Jw/o.jpg",
-     :is_closed=>false,
-     :url=>
-      "https://www.yelp.com/biz/del-norte-liquors-ranchos-de-taos?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-     :review_count=>2,
-:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      :price=>"$$",
      :location=>
       {:address1=>"712 Paseo Del Pueblo Norte",
@@ -4253,12 +4099,5 @@
        :display_address=>["1574 Paseo Del Pueblo Sur", "Ranchos de Taos, NM 87571"]},
      :phone=>"+15757588904",
      :display_phone=>"(575) 758-8904",
-     :distance=>5323.52622421997},
-    {:id=>"yYV4lcW-xa5dp1aGrvy_8A",
-     :alias=>"gutiz-taos",
-     :name=>"Gutiz",
-     :image_url=>"https://s3-media2.fl.yelpcdn.com/bphoto/qG2ihA4EyOLLiErllxwI7A/o.jpg",
-     :is_closed=>false,
-     :url=>
-      "https://www.yelp.com/biz/gutiz-taos?adjust_creative=lQBDH1JJAA5pG8BZW_9NVQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=lQBDH1JJAA5pG8BZW_9NVQ",
-     :review_count=>191,
+     :distance=>5323.52622421997}
+   ]]}}
