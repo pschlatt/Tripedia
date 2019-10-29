@@ -36,9 +36,11 @@ class YelpFacade
       y1 = new_lng
     end
     categories.map do |category|
-      yelp_radii.flat_map do |location|
-        YelpService.new(location).interests(category)
-      end
+      yelp_radii.each_with_index.flat_map do |location, index|
+        if (index % 2 == 0)
+          YelpService.new(location).interests(category)
+        end
+      end.uniq
     end
   end
 
