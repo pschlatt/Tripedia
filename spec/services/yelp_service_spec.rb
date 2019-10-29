@@ -24,7 +24,6 @@ RSpec.describe YelpService do
        	  'Authorization'=>'Bearer OWfLzzBrDfViAT4iIjyfI9P5s-09JoRPkjmActiCzsi_s-7xuWgOvUdr-yhYN-UQV-MmXzMNN8zldS2GQCNtTwWSgvaPFzDyOfBxTDe7Tgnk7noQCZuhTn2iE3m3XXYx',
        	  'User-Agent'=>'Faraday v0.17.0'
            }).to_return(status: 200, body: body, headers: {})
-           # binding.pry
 
         expect(response.response.body.first).to have_key(:id)
         expect(response.response.body.first).to have_key(:alias)
