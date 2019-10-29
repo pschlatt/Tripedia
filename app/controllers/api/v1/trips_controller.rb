@@ -30,13 +30,15 @@ class Api::V1::TripsController < ApplicationController
   def origin_coords
     location = trip_params['origin']
     geo = GeocodeFacade.new(location)
-    geo.coordinates
+    hash = {"lat": geo.coordinates[:lat], "lng": geo.coordinates[:lng]}
+    JSON.generate(hash)
   end
 
   def destination_coords
     location = trip_params['destination']
     geo = GeocodeFacade.new(location)
-    geo.coordinates
+    hash = {"lat": geo.coordinates[:lat], "lng": geo.coordinates[:lng]}
+    JSON.generate(hash)
   end
 
   def trip_params
