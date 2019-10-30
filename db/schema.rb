@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 2019_10_26_001825) do
   enable_extension "plpgsql"
 
   create_table "trips", force: :cascade do |t|
-    t.string "origin"
-    t.string "destination"
+    t.jsonb "origin"
+    t.jsonb "destination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
