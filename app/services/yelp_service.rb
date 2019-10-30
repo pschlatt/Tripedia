@@ -17,7 +17,7 @@ private
     @_connection ||= Faraday.new("https://api.yelp.com") do |f|
       f.headers['Authorization'] = "Bearer" + " #{ENV['YELP_API_KEY']}"
       f.params['radius'] = 10000
-      f.params['limit'] = 1
+      f.params['limit'] = 3
       f.adapter Faraday.default_adapter
     end
   end

@@ -2,17 +2,18 @@ class Api::V1::TripsController < ApplicationController
 
   def create
     facade = DirectionsMatrixFacade.new(trip_params)
-    user = User.find(trip_params[:user_id])
+    @user = User.find(trip_params[:user_id])
     origin = origin_coords
     destination = destination_coords
     trip_data = facade.return_trip_details
     distance = trip_data[:rows][0][:elements][0][:distance][:text]
     duration = trip_data[:rows][0][:elements][0][:duration][:text]
-    trip = Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: user.id)
+    trip = Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: @user.id)
     render json: {
       trip: trip,
       attractions: YelpFacade.get_attractions_on_route(trip, categories)
     }
+    UserMailer.with(user: @user).your_itinerary.deliver_now
   end
 
   private
@@ -30,13 +31,15 @@ class Api::V1::TripsController < ApplicationController
   def origin_coords
     location = trip_params['origin']
     geo = GeocodeFacade.new(location)
-    geo.coordinates
+    hash = {"lat": geo.coordinates[:lat], "lng": geo.coordinates[:lng]}
+    JSON.generate(hash)
   end
 
   def destination_coords
     location = trip_params['destination']
     geo = GeocodeFacade.new(location)
-    geo.coordinates
+    hash = {"lat": geo.coordinates[:lat], "lng": geo.coordinates[:lng]}
+    JSON.generate(hash)
   end
 
   def trip_params
