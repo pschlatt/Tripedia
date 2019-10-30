@@ -6,3 +6,10 @@ before_script:
 - bundle exec rake db:migrate
 services:
 - postgresql
+deploy:
+  provider: heroku
+  api_key:
+    secure: J+CAqX85ThYj1rJBF/7Xl/Jeap1vSVTGz5/dziAjNTNHAYcbc7bB702T0brfIA5ZI6KCjbDYCpNsWgW0jDCyLysFskGFba5PkD5fZJ88xhEwsRFwUsjxzngxcHyG2QZS8kwf3DaTPgL962bFaN/KjlXoknL435aekXFVyjDB9J6FUvYe5N/gRrZN93ACbKWbU2p5OLalu3rBcuV+ZFXA5HKn0krV6MtDFE5LHHgtBht8rERQ3ocPrfpQSPAVNJD/GpWMrFoH+AQ+fOMUkEYECE3/AXZoqP75fbvFVJ6uSoqihW2LozH+x7QOHEFFzr0pZgU0sxpXTjge84hVmxchsGmFwnWkyF06ZcSf24+/XcsLz1W1cPz6EYbh5/1LDSIByMSElb1X9vtdxFPe9drfnC9POxfk/htBI2RcaBGM0EOMKuL3PDcNjNP4/iWx8QPfppeMVmMv5bA5GmA8/v7A7uaPXOvLTU6m4Gg2D7ohE5uvf7Jb9AyZ5/zNN0KPRLq/ROZccCPukAcUjhkOMqGkqQ52/F4oa9Zcc38v4HKuN6sMvSli40CWyUuwDq1KrYIbAGkosWpkbrVTQErO5iEgBTvHOUIwxPTBiVsBv3lfeGFgPqeDG6zWJVsGT9sV7e3/eeM8vzUJPy+Lr8e/9WalBcZMnRjFlw5m+rMOAiqaOYY=
+  app: damp-refuge-09649
+  on:
+    repo: pschlatt/Tripedia
