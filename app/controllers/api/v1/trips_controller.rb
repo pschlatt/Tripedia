@@ -13,7 +13,7 @@ class Api::V1::TripsController < ApplicationController
       trip: trip,
       attractions: YelpFacade.get_attractions_on_route(trip, categories)
     }
-    UserMailer.with(user: @user).your_itinerary.deliver_now
+    # UserMailer.with(user: @user).your_itinerary.deliver_now
   end
 
   private
