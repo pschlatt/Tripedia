@@ -1,8 +1,8 @@
 class CreateTrips < ActiveRecord::Migration[5.2]
   def change
     create_table :trips do |t|
-      t.string :origin
-      t.string :destination
+      t.jsonb :origin
+      t.jsonb :destination
 
       t.timestamps
     end

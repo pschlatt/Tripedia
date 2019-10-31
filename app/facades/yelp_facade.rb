@@ -25,6 +25,8 @@ class YelpFacade
     lat_displacement = (x2 - x1)/interval_count
     lng_displacement = (y2 - y1)/interval_count
     yelp_radii = []
+    yelp_radii.push(origin)
+    yelp_radii.push(destination)
     interval_count.times do |interval|
       lat_and_lng = {}
       new_lat = x1 + lat_displacement
