@@ -10,6 +10,16 @@ Tripedia - Your trips encyclopedia!  This repository hosts the backend functiona
 - [Christopher Lane](https://github.com/CLLane)
 - [Paul Schlattmann](https://github.com/pschlatt)
 
+## Tech Stack
+- Ruby 2.6.3p62
+- Rails 5.2.3
+- PostgreSQL 11.5
+- RSpec 3.8
+- Travis CI 1.8.10
+
+## Schema
+![Database Schema Diagram](Untitled.png)
+
 ## Setup
 - Open your CLI 
 - run ```$ git clone https://github.com/pschlatt/Tripedia.git```
