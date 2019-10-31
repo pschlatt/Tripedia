@@ -26,7 +26,15 @@ Tripedia - Your trips encyclopedia!  This repository hosts the backend functiona
 - run ```$ cd Tripedia```
 - run ```$ bundle install```
 - run ```$ rails db:{create,migrate}```
-- run ```$ rails s``` and thats it! You can now test some endpoints via Postman.
+```
+YELP_API_KEY: '<KEY>'
+TRIPOSO_API_KEY: '<KEY>'
+GOOGLE_API_KEY: '<KEY>'
+GMAIL_USERNAME: '<EMAIL>'
+GMAIL_SECRET: '<KEY>'
+SECRET_KEY_BASE: '<KEY>'
+```
+include these in your ```application.yml``` and thats it! Run ```$ rails s``` You can now test some endpoints via Postman.
 
 ## Example Endpoints 
 #### POST 
