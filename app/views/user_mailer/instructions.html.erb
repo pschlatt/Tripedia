@@ -8,6 +8,9 @@
     <body>
       <p>Hey <%= @user.name %>,</p>
       <p>Check out your trip & all the places you can check out!</p>
-
+      <p>Trip Origin: <%= @trip.origin %>, Destination: <%= @trip.destination %></p>
+      <p>Attraction Name: <%= @waypoint[:name] %></p>
+      <img src="<%= @waypoint[:image_url] %>">
+      <p>Check it out! <%= @waypoint[:url] %></p>
     </body>
 </html>
