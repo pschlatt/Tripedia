@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'Trip_Creation', type: :request do
   it "can take origin and destination of a trip and return geocoded points" do
-
     response =
       (user = User.create!(name: "miss buttersworth", email: "yo@bach.com", password: "password")
       trip_created = File.open("./fixtures/trip_creation.json")

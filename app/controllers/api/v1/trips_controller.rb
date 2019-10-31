@@ -10,8 +10,8 @@ class Api::V1::TripsController < ApplicationController
     duration = trip_data[:rows][0][:elements][0][:duration][:text]
     trip = Trip.create(origin: origin, destination: destination, distance: distance, duration: duration, user_id: @user.id)
     render json: {
-      trip: trip,
-      attractions: YelpFacade.get_attractions_on_route(trip, categories)
+      trip: trip
+      # attractions: YelpFacade.get_attractions_on_route(trip, categories)
     }
     # UserMailer.with(user: @user).your_itinerary.deliver_now
   end
@@ -23,7 +23,7 @@ class Api::V1::TripsController < ApplicationController
     "active", "haunted", "museums", "spa",
     "bedbreakfast", "hotels", "resorts",
     "breweries", "divebars", "sports",
-    "breakfast_brunch", "chinese", "american",
+    "breakfast_brunch", "restaurants",
     "bodyshops", "servicestations", "reststops"
     ]
   end
