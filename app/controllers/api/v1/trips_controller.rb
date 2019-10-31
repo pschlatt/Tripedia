@@ -13,7 +13,11 @@ class Api::V1::TripsController < ApplicationController
       trip: trip,
       attractions: YelpFacade.get_attractions_on_route(trip, categories)
     }
-    # UserMailer.with(user: @user).your_itinerary.deliver_now
+  end
+
+  def mail
+    @user = User.find(email_params[:user_id])
+    UserMailer.with(user: @user).instructions.deliver_now
   end
 
   private
@@ -44,5 +48,9 @@ class Api::V1::TripsController < ApplicationController
 
   def trip_params
     params.permit(:origin, :destination, :user_id)
+  end
+
+  def email_params
+    params.permit(:user_id, :trip_id)
   end
 end
