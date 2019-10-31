@@ -16,5 +16,4 @@ Tripedia - Your trips encyclopedia!  This repository hosts the backend functiona
 - run ```$ cd Tripedia```
 - run ```$ bundle install```
 - run ```$ rails db:{create,migrate}```
-- run ```$ rails s```
-- Thats it! You can now test some endpoints.
+- run ```$ rails s``` and thats it! You can now test some endpoints via Postman.
