@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post '/users', to: 'users#create'
       post '/user_login', to: 'sessions#create'
       post '/users/:user_id/trips', to: 'trips#create'
+      post '/users/:user_id/trips/:trips_id', to: 'trips#mail'
     end
   end
 end
