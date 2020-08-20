@@ -1,8 +1,11 @@
 class UserMailer < ApplicationMailer
-  default from: "notifications@tripediatravel.com"
+  default from: 'noreply@company.com'
 
-  def your_itinerary
-    @user = params[:user]
-    mail(to: @user.email, subject: "Your road trip itinerary")
+  def instructions(user, waypoints)
+    @user = user
+    @trip = user.trips.first
+    @waypoint = waypoints.first
+    # binding.pry
+    mail to: @user.email, subject: 'Instructions'
   end
 end

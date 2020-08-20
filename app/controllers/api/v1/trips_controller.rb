@@ -17,6 +17,7 @@ class Api::V1::TripsController < ApplicationController
 
   def mail
     @user = User.find(email_params[:user_id])
+    @trip = @user.trips.find(email_params[:trip_id])
     UserMailer.with(user: @user).instructions.deliver_now
   end
 
